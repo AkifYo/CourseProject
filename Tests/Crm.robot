@@ -1,7 +1,7 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource    ../Resources/Common.robot
-Resource    ../Resources/CrmWebApp.robot
+Library             SeleniumLibrary
+Resource            ../Resources/Common.robot
+Resource            ../Resources/CrmWebApp.robot
 Test Setup          Begin Web Test
 Test Teardown       End Web Test
 
@@ -13,7 +13,7 @@ Test Teardown       End Web Test
 
 Should be able to login
 
-    [Documentation]    This test is about loggin
+    [Documentation]    This test is about logging
     [Tags]              1003    Login    Smoke
 
     CrmWebApp.User Login
