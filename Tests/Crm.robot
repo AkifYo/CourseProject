@@ -7,7 +7,7 @@ Test Teardown       End Web Test
 
 *** Variables ***
 ${BROWSER}=             Chrome
-
+${URL}=                 https://automationplayground.com/crm
 ${USER_EMAIL}=          a@a.com
 ${USER_PASSWORD}=       123
 
@@ -18,7 +18,7 @@ Should be able to add new customer
     [Documentation]    This test is about adding new customers
     [Tags]              1006    Contacts    Smoke
 
-    User goes to home page
+    User goes to home page          ${URL}
     User logins to the website      ${USER_EMAIL}       ${USER_PASSWORD}
     User adds new customer
     User log out

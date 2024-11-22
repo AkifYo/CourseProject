@@ -7,10 +7,11 @@ Resource    ../Resources/PO/CustomerPage.robot
 Resource    ../Resources/PO/AddNewCustomerPage.robot
 Resource    ../Resources/PO/SignOutPage.robot
 *** Variables ***
-${URL}=                 https://automationplayground.com/crm
+
 
 *** Keywords ***
 User goes to home page
+    [Arguments]                          ${URL}
     HomePage.Navigate to the website     ${URL}
     HomePage.Validate page loaded
 
