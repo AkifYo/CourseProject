@@ -6,30 +6,26 @@ Test Setup          Begin Web Test
 Test Teardown       End Web Test
 
 *** Variables ***
+${BROWSER}=             Chrome
 
+${USER_EMAIL}=          a@a.com
+${USER_PASSWORD}=       123
 
 #run command      robot -d Results Tests/Crm.robot
 *** Test Cases ***
-
-Should be able to login
-
-    [Documentation]    This test is about logging
-    [Tags]              1003    Login    Smoke
-
-    CrmWebApp.User Login
-
-    sleep  5s
 Should be able to add new customer
 
     [Documentation]    This test is about adding new customers
     [Tags]              1006    Contacts    Smoke
 
-    CrmWebApp.User Login
-    CrmWebApp.Adding New Customer
-    CrmWebApp.User Sign Out
+    User goes to home page
+    User logins to the website      ${USER_EMAIL}       ${USER_PASSWORD}
+    User adds new customer
+    User log out
+
+
     sleep  5s
 
 
 *** Keywords ***
-
 

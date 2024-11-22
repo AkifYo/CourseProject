@@ -1,31 +1,36 @@
 *** Settings ***
-Library    SeleniumLibrary
-
-
+Library     SeleniumLibrary
+Resource    ../Resources/PO/HomePage.robot
+Resource    ../Resources/PO/TopNav.robot
+Resource    ../Resources/PO/LoginPage.robot
+Resource    ../Resources/PO/CustomerPage.robot
+Resource    ../Resources/PO/AddNewCustomerPage.robot
+Resource    ../Resources/PO/SignOutPage.robot
 *** Variables ***
+${URL}=                 https://automationplayground.com/crm
 
 *** Keywords ***
-User Login
-    click link                      Sign In
-    wait until page contains        Login
-    input text                      id=email-id         a@a.com
-    input text                      id=password         123
-    click button                    Submit
-    wait until page contains        Our Happy Customers
+User goes to home page
+    HomePage.Navigate to the website     ${URL}
+    HomePage.Validate page loaded
 
-Adding New Customer
-    click link                      id=new-customer
-    wait until page contains        Add Customer
-    input text                      EmailAddress     a@b.com
-    input text                      FirstName        Jane
-    input text                      LastName         Rosa
-    input text                      City             Houston
-    select from list by value       StateOrRegion    TX
-    select radio button             gender              female
-    select checkbox                 promos-name
-    click button                    Submit
-    wait until page contains        Success! New customer added.
+User logins to the website
+    [Arguments]                     ${EMAIL}                ${PASSWORD}
+    TopNav.SignIn
+    TopNav.Validate page loaded
+    LoginPage.Fill in the email textbox     ${EMAIL}
+    LoginPage.Fill in the password textbox  ${PASSWORD}
+    LoginPage.Click submit
+    CustomerPage.Validate page loaded
 
-User Sign Out
-    click link                      Sign Out
-    wait until page contains        Signed Out
+
+User adds new customer
+    CustomerPage.Add new customer
+    AddNewCustomerPage.Validate page loaded
+    AddNewCustomerPage.Add new customer with info
+    AddNewCustomerPage.Click submit button
+    CustomerPage.Validate page loaded
+
+User log out
+    SignOutPage.Log out from the page
+    SignOutPage.Validate page loaded
