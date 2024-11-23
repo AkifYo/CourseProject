@@ -14,7 +14,7 @@ ${CUSTOMER_CHECKBOX}=               promos-name
 ${CUSTOMERADD_BUTTON}=              Submit
 *** Keywords ***
 Validate page loaded
-    wait until page contains      ${ADDCUSTOMER_HEADER}
+    wait until page contains        ${ADDCUSTOMER_HEADER}
 
 
 Add new customer with info

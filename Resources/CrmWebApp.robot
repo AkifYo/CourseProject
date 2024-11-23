@@ -1,11 +1,11 @@
 *** Settings ***
-Library     SeleniumLibrary
 Resource    ../Resources/PO/HomePage.robot
 Resource    ../Resources/PO/TopNav.robot
 Resource    ../Resources/PO/LoginPage.robot
 Resource    ../Resources/PO/CustomerPage.robot
 Resource    ../Resources/PO/AddNewCustomerPage.robot
 Resource    ../Resources/PO/SignOutPage.robot
+
 *** Variables ***
 
 
@@ -23,7 +23,6 @@ User logins to the website
     LoginPage.Fill in the password textbox  ${PASSWORD}
     LoginPage.Click submit
     CustomerPage.Validate page loaded
-
 
 User adds new customer
     CustomerPage.Add new customer

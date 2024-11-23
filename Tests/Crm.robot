@@ -22,9 +22,7 @@ Should be able to add new customer
     User logins to the website      ${USER_EMAIL}       ${USER_PASSWORD}
     User adds new customer
     User log out
-
-
-    sleep  5s
+    sleep  3s
 
 
 *** Keywords ***

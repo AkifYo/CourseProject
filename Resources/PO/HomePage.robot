@@ -8,7 +8,8 @@ ${HOMEPAGE_HEADER_LABEL}=      Customers Are Priority One!
 
 Navigate to the website
     [Arguments]                     ${URL}
-    go to       ${URL}
+
+    go to                           ${URL}
     maximize browser window
 
 
