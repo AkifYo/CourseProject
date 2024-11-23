@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${SIGNOUT_LINK}=                    Sign Out
-${SIGNOUT_HEADER}=                  Signed Out
+${SIGNOUT_HEADER}=                  Signed out
 
 *** Keywords ***
 Log out from the page
