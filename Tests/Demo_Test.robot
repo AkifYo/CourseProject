@@ -1,30 +1,39 @@
 *** Settings ***
 Library     SeleniumLibrary
+Library     String
 
 
-Test Setup  Testi baslat
-Test Teardown    Testi bitir
+
 
 # robot Demo_Test.robot
 *** Variables ***
 ${BROWSER}=             chrome
-${URL}=                 https://automationteststore.com/
+${URL}=                 https://www.saucedemo.com/
 
 *** Test Cases ***
-My first Test Case
+Get the usernames
+    Begin web test
+    Navigate to the website
+    Get the users and password
+    End web test
 
-   basligi bana yazdir
-    sleep               3s
 
 
 *** Keywords ***
-Testi baslat
-    open browser        ${URL}                       ${BROWSER}
+Begin web test
+    open browser    about:blank     ${BROWSER}
     maximize browser window
 
-Testi bitir
-    close all browsers
+Navigate to the website
+    go to    ${URL}
 
-Basligi bana yazdir
-     ${Baslik}=     get title
-     log            ${Baslik}
+Get the users and password
+
+    ${users}        get text        login_credentials
+    ${password}     get text        css=div.login_password
+
+    log many    ${users}        ${password}
+    ${users}=   String.fetch from right
+
+End web test
+    close all browsers
