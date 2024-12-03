@@ -1,37 +1,42 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/Common.robot
-Test Setup    Begin Web Test
-Test Teardown    End Web Test
 
-
-# robot -d Results Tests/03_Dictionary.robot
-
+# https://automationplayground.com/crm/
 *** Variables ***
-#Scalar variables
+&{USER_CREDENTIALS}     user_email=abc@gmail.com      password=qwer123
 
-${URL}          https://www.ebay.com/
-&{user_choise}    book=inferno       car=audi
+
+${BROWSER}      Chrome
+${URL}          https://automationplayground.com/crm/
+
 
 *** Test Cases ***
-Ebay search results
+Login with valid credentials
+    [Documentation]     this test is about variables
+    [Tags]              1001    functional
+    Begin web test
     Navigate to the website
-    #Handle cookies
-    Search for product
-    Check the results
+    Click to Sign In
+    Enter login credentials   &{USER_CREDENTIALS}
+    End web test
+
 
 *** Keywords ***
+Begin web test
+    open browser    about:blank     ${BROWSER}
+    maximize browser window
+
 Navigate to the website
-    go to    ${URL}
+    go to                           ${URL}
 
-Handle cookies
-    click element    accept all
+Click to Sign In
+    click link      Sign In
 
-Search for product
-    input text    gh-ac     ${user_choise.car}
-    click element    gh-btn
+Enter login credentials
+    [Arguments]   &{user_credentials}
+    input text    email-id          ${user_credentials.user_email}
+    input text    password          ${user_credentials.password}
+    click button    submit-id
 
-Check the results
-
-    ${text}     get text    xpath=//button[normalize-space()='Save this search']
-    log    ${text}
+End web test
+    close all browsers

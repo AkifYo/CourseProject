@@ -1,40 +1,41 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/Common.robot
-
-Test Setup    Begin Web Test
-Test Teardown    End Web Test
-
-# robot -d Results Tests/01_Scalar.robot
 
 # https://automationplayground.com/crm/
-
-
 *** Variables ***
-#Scalar variables
-
-${URL}          https://www.ebay.com/
-${search_word}  iphone 15
-
+${USER_EMAIL}           abc@gmail.com
+${USER_PASSWORD}        qwer123
 *** Test Cases ***
-Ebay search results
+
+
+
+Login with valid credentials
+    [Documentation]     this test is about variables
+    [Tags]              1001    functional
+    Begin web test
     Navigate to the website
-    #Handle cookies
-    Search for product
-    Check the results
+    Click to Sign In
+    Enter login credentials     ${USER_EMAIL}    ${USER_PASSWORD}
+    End web test
+
+
 
 *** Keywords ***
+Begin web test
+    open browser    about:blank     chrome
+    maximize browser window
+
 Navigate to the website
-    go to    ${URL}
+    go to    https://automationplayground.com/crm/
 
-Handle cookies
-    click element    accept all
+Click to Sign In
+    click link      Sign In
 
-Search for product
-    input text    gh-ac     ${search_word}
-    click element    gh-btn
+Enter login credentials
+    [Arguments]   ${user_email}     ${user_password}
+    input text    email-id          ${user_email}
+    input text    password          ${user_password}
+    click button    submit-id
 
-Check the results
-
-    ${text}     get text    xpath=//button[normalize-space()='Save this search']
-    log    ${text}
+End web test
+    close all browsers

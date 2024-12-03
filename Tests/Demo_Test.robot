@@ -1,39 +1,38 @@
 *** Settings ***
-Library     SeleniumLibrary
-Library     String
+Library    SeleniumLibrary
 
 
-
-
-# robot Demo_Test.robot
 *** Variables ***
-${BROWSER}=             chrome
-${URL}=                 https://www.saucedemo.com/
+&{SEARCH_WORD}      book=inferno    car=audi    home=bosch
+&{BROWSER}          first=chrome      second=firefox     third=edge
+
 
 *** Test Cases ***
-Get the usernames
+Search for product
+
+    [Documentation]    This test is about searching an ecommers website
+    [Tags]              Functional
     Begin web test
     Navigate to the website
-    Get the users and password
+    Search products            ${SEARCH_WORD.car}
+    Validate search results
     End web test
-
-
 
 *** Keywords ***
 Begin web test
-    open browser    about:blank     ${BROWSER}
+    open browser    about:blank     ${BROWSER.first}
     maximize browser window
 
 Navigate to the website
-    go to    ${URL}
+    go to    https://www.ebay.com/
 
-Get the users and password
+Search products
+    [Arguments]    ${search_word}
+    input text    gh-ac     ${search_word}
+    click element    gh-btn
 
-    ${users}        get text        login_credentials
-    ${password}     get text        css=div.login_password
-
-    log many    ${users}        ${password}
-    ${users}=   String.fetch from right
+Validate search results
+    wait until page contains    Save this search
 
 End web test
     close all browsers

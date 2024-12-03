@@ -1,88 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-30T17:38:52.908008" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo Test" source="C:\development\CourseProject\Tests\Demo_Test.robot">
-<test id="s1-t1" name="Get the usernames" line="13">
-<kw name="Begin web test">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-03T20:35:57.567288" rpa="false" schemaversion="5">
+<suite id="s1" name="04 Browser Window" source="C:\development\CourseProject\Tests\04_Browser_Window.robot">
+<test id="s1-t1" name="Open different browsers" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-30T17:38:53.223154" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<arg>about:blank</arg>
+<msg time="2024-12-03T20:35:57.843484" level="INFO">Opening browser 'Chrome' to base url 'https://automationplayground.com/crm/'.</msg>
+<arg>${URL}</arg>
 <arg>${BROWSER}</arg>
+<arg>alias=Brwsr</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-30T17:38:53.222916" elapsed="1.974357"/>
+<status status="PASS" start="2024-12-03T20:35:57.843154" elapsed="2.408527"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-30T17:38:55.197650" elapsed="0.152012"/>
+<status status="PASS" start="2024-12-03T20:36:00.259471" elapsed="0.357234"/>
 </kw>
-<status status="PASS" start="2024-11-30T17:38:53.222176" elapsed="2.127682"/>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-03T20:36:00.617558" level="INFO">Opening browser 'ff' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>ff</arg>
+<arg>alias=Brwsr2</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-03T20:36:00.617196" elapsed="6.486068"/>
 </kw>
-<kw name="Navigate to the website">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-30T17:38:55.354842" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-30T17:38:55.354551" elapsed="0.477249"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.124339" elapsed="0.291447"/>
 </kw>
-<status status="PASS" start="2024-11-30T17:38:55.353997" elapsed="0.478370"/>
+<kw name="Get Browser Aliases" owner="SeleniumLibrary">
+<msg time="2024-12-03T20:36:07.416819" level="INFO">@{alias} = [ Brwsr | Brwsr2 ]</msg>
+<var>@{alias}</var>
+<doc>Returns aliases of all active browser that has an alias as NormalizedDict.
+The dictionary contains the aliases as keys and the index as value.
+This can be accessed as dictionary ``${aliases.key}`` or as list ``@{aliases}[0]``.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.416326" elapsed="0.000567"/>
 </kw>
-<kw name="Get the users and password">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-30T17:38:55.928135" level="INFO">${users} = Accepted usernames are:
-standard_user
-locked_out_user
-problem_user
-performance_glitch_user
-error_user
-visual_user</msg>
-<var>${users}</var>
-<arg>login_credentials</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-30T17:38:55.839872" elapsed="0.088358"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-03T20:36:07.417637" level="INFO">Brwsr2</msg>
+<arg>${alias}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.417336" elapsed="0.000406"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-30T17:38:55.981801" level="INFO">${password} = Password for all users:
-secret_sauce</msg>
-<var>${password}</var>
-<arg>css=div.login_password</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-30T17:38:55.928567" elapsed="0.053342"/>
+<kw name="Get Browser Ids" owner="SeleniumLibrary">
+<msg time="2024-12-03T20:36:07.418824" level="INFO">@{browser_id} = [ 1 | 2 ]</msg>
+<var>@{browser_id}</var>
+<doc>Returns index of all active browser as list.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.418430" elapsed="0.000469"/>
 </kw>
-<kw name="Log Many" owner="BuiltIn">
-<msg time="2024-11-30T17:38:55.982618" level="INFO">Accepted usernames are:
-standard_user
-locked_out_user
-problem_user
-performance_glitch_user
-error_user
-visual_user</msg>
-<msg time="2024-11-30T17:38:55.982768" level="INFO">Password for all users:
-secret_sauce</msg>
-<arg>${users}</arg>
-<arg>${password}</arg>
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2024-11-30T17:38:55.982280" elapsed="0.000590"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-03T20:36:07.420117" level="INFO">2</msg>
+<arg>${browser_id}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.419761" elapsed="0.000484"/>
 </kw>
-<status status="PASS" start="2024-11-30T17:38:55.838804" elapsed="0.144264"/>
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>Brwsr</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.420554" elapsed="0.000250"/>
 </kw>
-<kw name="End web test">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-03T20:36:07.421492" level="INFO">Clicking link 'Sign In'.</msg>
+<arg>Sign In</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.421176" elapsed="0.409017"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-03T20:36:10.844282" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-03T20:36:07.843512" elapsed="3.001263"/>
+</kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-30T17:38:55.983892" elapsed="6.474963"/>
+<status status="PASS" start="2024-12-03T20:36:10.846016" elapsed="13.657350"/>
 </kw>
-<status status="PASS" start="2024-11-30T17:38:55.983472" elapsed="6.475523"/>
-</kw>
-<status status="PASS" start="2024-11-30T17:38:53.221428" elapsed="9.237958"/>
+<doc>This test case shows browsers operation keywords in Rbf</doc>
+<tag>1002</tag>
+<tag>Sample</tag>
+<status status="PASS" start="2024-12-03T20:35:57.841900" elapsed="26.662590"/>
 </test>
-<status status="PASS" start="2024-11-30T17:38:52.909605" elapsed="9.550813"/>
+<status status="PASS" start="2024-12-03T20:35:57.568850" elapsed="26.939036"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">1002</stat>
+<stat pass="1" fail="0" skip="0">Sample</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo Test">Demo Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="04 Browser Window">04 Browser Window</stat>
 </suite>
 </statistics>
 <errors>
