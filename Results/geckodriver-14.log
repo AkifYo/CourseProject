@@ -1,0 +1,22 @@
+1733255011053	geckodriver	INFO	Listening on 127.0.0.1:59745
+1733255014154	mozrunner::runner	INFO	Running command: "C:\\Users\\Lenovo X270\\.cache\\selenium\\firefox\\win64\\133.0\\firefox.exe" "--marionette" "--remote-debu ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\LENOVO~1\\AppData\\Local\\Temp\\rust_mozprofileQo6NV8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1733255014590	Marionette	INFO	Marionette enabled
+1733255014731	Marionette	INFO	Listening on port 59753
+WebDriver BiDi listening on ws://127.0.0.1:59746
+Read port: 59753
+1733255014975	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59746/devtools/browser/e2c5df82-22d8-48d0-bae2-861eb006d04d
+JavaScript warning: https://www.salesforce.com/CjK4W4zkZs/aV/8WB32C0U/tfV1/Li4dWAE/XmERfl1/-Qzwp, line 1: unreachable code after return statement
+1733255028823	Marionette	INFO	Stopped listening on port 59753
+JavaScript warning: https://s.go-mpulse.net/boomerang/NCPYV-VGJPP-N4J93-8HN3B-8B6S3, line 10: Script terminated by timeout at:
+l@https://s.go-mpulse.net/boomerang/NCPYV-VGJPP-N4J93-8HN3B-8B6S3:10:43459
+
+JavaScript warning: https://assets.vidyard.com/play/js/6-c97a35a2e0ba3929252bd0fab66a6760.js, line 61: Script terminated by timeout at:
+916/i/./src/controller/cap-level-controller.ts/r.getDimensions@https://assets.vidyard.com/play/js/6-c97a35a2e0ba3929252bd0fab66a6760.js:61:3495
+get@https://assets.vidyard.com/play/js/6-c97a35a2e0ba3929252bd0fab66a6760.js:61:4053
+916/i/./src/controller/cap-level-controller.ts/r.detectPlayerSize@https://assets.vidyard.com/play/js/6-c97a35a2e0ba3929252bd0fab66a6760.js:61:2238
+
+Dynamically enable window occlusion 1

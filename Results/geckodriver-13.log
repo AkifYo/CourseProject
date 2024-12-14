@@ -1,0 +1,21 @@
+1733254915171	geckodriver	INFO	Listening on 127.0.0.1:59631
+1733254918301	mozrunner::runner	INFO	Running command: "C:\\Users\\Lenovo X270\\.cache\\selenium\\firefox\\win64\\133.0\\firefox.exe" "--marionette" "--remote-debu ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\LENOVO~1\\AppData\\Local\\Temp\\rust_mozprofileozJMaf"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1733254918753	Marionette	INFO	Marionette enabled
+1733254918911	Marionette	INFO	Listening on port 59639
+WebDriver BiDi listening on ws://127.0.0.1:59632
+Read port: 59639
+1733254919162	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59632/devtools/browser/96dda45f-b4d9-4b33-ba4d-d4d47f532de3
+JavaScript warning: https://www.salesforce.com/CjK4W4zkZs/aV/8WB32C0U/tfV1/Li4dWAE/XmERfl1/-Qzwp, line 1: unreachable code after return statement
+1733254933711	Marionette	INFO	Stopped listening on port 59639
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 47: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1733254933817	WebDriver BiDi	ERROR	Failed to stop protocol: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.sys.mjs :: allowAllCerts.disable :: line 47"  data: no] Stack trace: allowAllCerts.disable()@cert.sys.mjs:47
+destroy()@Session.sys.mjs:280
+deleteSession()@WebDriverBiDi.sys.mjs:174
+stop()@WebDriverBiDi.sys.mjs:264
+observe()@resource://gre/modules/AsyncShutdown.sys.mjs:569
