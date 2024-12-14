@@ -1,95 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-03T20:35:57.567288" rpa="false" schemaversion="5">
-<suite id="s1" name="04 Browser Window" source="C:\development\CourseProject\Tests\04_Browser_Window.robot">
-<test id="s1-t1" name="Open different browsers" line="11">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-14T13:09:06.147857" rpa="false" schemaversion="5">
+<suite id="s1" name="06 RadioButton" source="C:\development\CourseProject\Tests\06_RadioButton.robot">
+<test id="s1-t1" name="Verify the radio button is clicked" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-03T20:35:57.843484" level="INFO">Opening browser 'Chrome' to base url 'https://automationplayground.com/crm/'.</msg>
+<msg time="2024-12-14T13:09:06.444754" level="INFO">Opening browser 'Chrome' to base url 'https://practice.expandtesting.com/radio-buttons'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<arg>alias=Brwsr</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-03T20:35:57.843154" elapsed="2.408527"/>
+<status status="PASS" start="2024-12-14T13:09:06.444417" elapsed="3.380743"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-03T20:36:00.259471" elapsed="0.357234"/>
+<status status="PASS" start="2024-12-14T13:09:09.825694" elapsed="0.358899"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-03T20:36:00.617558" level="INFO">Opening browser 'ff' to base url 'about:blank'.</msg>
-<arg>about:blank</arg>
-<arg>ff</arg>
-<arg>alias=Brwsr2</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-03T20:36:00.617196" elapsed="6.486068"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.124339" elapsed="0.291447"/>
-</kw>
-<kw name="Get Browser Aliases" owner="SeleniumLibrary">
-<msg time="2024-12-03T20:36:07.416819" level="INFO">@{alias} = [ Brwsr | Brwsr2 ]</msg>
-<var>@{alias}</var>
-<doc>Returns aliases of all active browser that has an alias as NormalizedDict.
-The dictionary contains the aliases as keys and the index as value.
-This can be accessed as dictionary ``${aliases.key}`` or as list ``@{aliases}[0]``.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.416326" elapsed="0.000567"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-12-03T20:36:07.417637" level="INFO">Brwsr2</msg>
-<arg>${alias}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.417336" elapsed="0.000406"/>
-</kw>
-<kw name="Get Browser Ids" owner="SeleniumLibrary">
-<msg time="2024-12-03T20:36:07.418824" level="INFO">@{browser_id} = [ 1 | 2 ]</msg>
-<var>@{browser_id}</var>
-<doc>Returns index of all active browser as list.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.418430" elapsed="0.000469"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-12-03T20:36:07.420117" level="INFO">2</msg>
-<arg>${browser_id}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.419761" elapsed="0.000484"/>
-</kw>
-<kw name="Switch Browser" owner="SeleniumLibrary">
-<arg>Brwsr</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.420554" elapsed="0.000250"/>
-</kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-12-03T20:36:07.421492" level="INFO">Clicking link 'Sign In'.</msg>
-<arg>Sign In</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.421176" elapsed="0.409017"/>
+<kw name="Page Should Contain Radio Button" owner="SeleniumLibrary">
+<msg time="2024-12-14T13:09:10.214494" level="INFO">Current page contains radio button 'red'.</msg>
+<arg>red</arg>
+<doc>Verifies radio button ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-12-14T13:09:10.184997" elapsed="0.029695"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-03T20:36:10.844282" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2024-12-14T13:09:12.216461" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-03T20:36:07.843512" elapsed="3.001263"/>
+<status status="PASS" start="2024-12-14T13:09:10.215182" elapsed="2.001894"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-14T13:09:12.222995" level="INFO">Executing JavaScript:
+window.scrollBy(0, 500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-14T13:09:12.222304" elapsed="1.129598"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T13:09:15.356239" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T13:09:13.353725" elapsed="2.002939"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-14T13:09:15.359743" level="INFO">Clicking element 'red'.</msg>
+<arg>red</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-14T13:09:15.358473" elapsed="0.135265"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T13:09:17.494776" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T13:09:15.494107" elapsed="2.001071"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-14T13:09:17.497226" level="INFO">Clicking element 'blue'.</msg>
+<arg>blue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-14T13:09:17.496464" elapsed="0.094131"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T13:09:19.591815" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T13:09:17.591101" elapsed="2.000949"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-12-14T13:09:19.593648" level="INFO">Selecting 'black' from radio button 'color'.</msg>
+<arg>color</arg>
+<arg>black</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-12-14T13:09:19.593001" elapsed="0.104066"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T13:09:21.698202" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T13:09:19.697483" elapsed="2.001189"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-12-14T13:09:21.702207" level="INFO">Selecting 'football' from radio button 'sport'.</msg>
+<arg>sport</arg>
+<arg>football</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-12-14T13:09:21.701000" elapsed="0.103398"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T13:09:23.805352" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T13:09:21.804739" elapsed="2.000751"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-12-03T20:36:10.846016" elapsed="13.657350"/>
+<status status="PASS" start="2024-12-14T13:09:23.806005" elapsed="6.578708"/>
 </kw>
-<doc>This test case shows browsers operation keywords in Rbf</doc>
-<tag>1002</tag>
-<tag>Sample</tag>
-<status status="PASS" start="2024-12-03T20:35:57.841900" elapsed="26.662590"/>
+<doc>This test case shows how to verufy a radio button</doc>
+<tag>1005</tag>
+<tag>radio button</tag>
+<status status="PASS" start="2024-12-14T13:09:06.443107" elapsed="23.942499"/>
 </test>
-<status status="PASS" start="2024-12-03T20:35:57.568850" elapsed="26.939036"/>
+<status status="PASS" start="2024-12-14T13:09:06.150202" elapsed="24.237679"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">1002</stat>
-<stat pass="1" fail="0" skip="0">Sample</stat>
+<stat pass="1" fail="0" skip="0">1005</stat>
+<stat pass="1" fail="0" skip="0">radio button</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="04 Browser Window">04 Browser Window</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="06 RadioButton">06 RadioButton</stat>
 </suite>
 </statistics>
 <errors>
