@@ -1,115 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-14T13:09:06.147857" rpa="false" schemaversion="5">
-<suite id="s1" name="06 RadioButton" source="C:\development\CourseProject\Tests\06_RadioButton.robot">
-<test id="s1-t1" name="Verify the radio button is clicked" line="12">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-14T20:25:11.587584" rpa="false" schemaversion="5">
+<suite id="s1" name="07 CheckBox" source="C:\development\CourseProject\Tests\07_CheckBox.robot">
+<test id="s1-t1" name="Verify the checkbox is clicked" line="16">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-14T13:09:06.444754" level="INFO">Opening browser 'Chrome' to base url 'https://practice.expandtesting.com/radio-buttons'.</msg>
+<msg time="2024-12-14T20:25:12.379630" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-14T13:09:06.444417" elapsed="3.380743"/>
+<status status="PASS" start="2024-12-14T20:25:12.379283" elapsed="7.657340"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-14T13:09:09.825694" elapsed="0.358899"/>
-</kw>
-<kw name="Page Should Contain Radio Button" owner="SeleniumLibrary">
-<msg time="2024-12-14T13:09:10.214494" level="INFO">Current page contains radio button 'red'.</msg>
-<arg>red</arg>
-<doc>Verifies radio button ``locator`` is found from current page.</doc>
-<status status="PASS" start="2024-12-14T13:09:10.184997" elapsed="0.029695"/>
+<status status="PASS" start="2024-12-14T20:25:20.055250" elapsed="0.964383"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T13:09:12.216461" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2024-12-14T20:25:22.065015" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T13:09:10.215182" elapsed="2.001894"/>
+<status status="PASS" start="2024-12-14T20:25:21.062704" elapsed="1.003077"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-14T20:25:22.131802" level="INFO">Clicking button 'gdpr-banner-accept'.</msg>
+<arg>gdpr-banner-accept</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-14T20:25:22.130192" elapsed="2.022343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-14T20:25:24.154223" level="INFO">Typing text 'lego' into text field 'gh-ac'.</msg>
+<arg>gh-ac</arg>
+<arg>lego</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-14T20:25:24.153769" elapsed="1.256810"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-14T20:25:25.426971" level="INFO">Clicking element 'gh-btn'.</msg>
+<arg>gh-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-14T20:25:25.425749" elapsed="1.054554"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T20:25:27.510289" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T20:25:26.509501" elapsed="1.001014"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-12-14T13:09:12.222995" level="INFO">Executing JavaScript:
-window.scrollBy(0, 500)
+<msg time="2024-12-14T20:25:27.531238" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200)
 Without any arguments.</msg>
-<arg>window.scrollBy(0, 500)</arg>
+<arg>window.scrollBy(0, 200)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-12-14T13:09:12.222304" elapsed="1.129598"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T13:09:15.356239" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T13:09:13.353725" elapsed="2.002939"/>
+<status status="PASS" start="2024-12-14T20:25:27.530159" elapsed="3.651495"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-14T13:09:15.359743" level="INFO">Clicking element 'red'.</msg>
-<arg>red</arg>
+<msg time="2024-12-14T20:25:31.211392" level="INFO">Clicking element 'xpath=//span[contains(text(), 'CITY')][1]'.</msg>
+<arg>xpath=//span[contains(text(), 'CITY')][1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-14T13:09:15.358473" elapsed="0.135265"/>
+<status status="PASS" start="2024-12-14T20:25:31.211014" elapsed="6.994021"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-12-14T20:25:38.399162" level="INFO">Verifying checkbox '//div/span/input[1]' is selected.</msg>
+<arg>//div/span/input[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-12-14T20:25:38.397907" elapsed="6.382077"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T13:09:17.494776" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2024-12-14T20:25:45.781348" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T13:09:15.494107" elapsed="2.001071"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-14T13:09:17.497226" level="INFO">Clicking element 'blue'.</msg>
-<arg>blue</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-14T13:09:17.496464" elapsed="0.094131"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T13:09:19.591815" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T13:09:17.591101" elapsed="2.000949"/>
-</kw>
-<kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2024-12-14T13:09:19.593648" level="INFO">Selecting 'black' from radio button 'color'.</msg>
-<arg>color</arg>
-<arg>black</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2024-12-14T13:09:19.593001" elapsed="0.104066"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T13:09:21.698202" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T13:09:19.697483" elapsed="2.001189"/>
-</kw>
-<kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2024-12-14T13:09:21.702207" level="INFO">Selecting 'football' from radio button 'sport'.</msg>
-<arg>sport</arg>
-<arg>football</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2024-12-14T13:09:21.701000" elapsed="0.103398"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T13:09:23.805352" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T13:09:21.804739" elapsed="2.000751"/>
+<status status="PASS" start="2024-12-14T20:25:44.780608" elapsed="1.000869"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-12-14T13:09:23.806005" elapsed="6.578708"/>
+<status status="PASS" start="2024-12-14T20:25:45.781846" elapsed="7.732945"/>
 </kw>
-<doc>This test case shows how to verufy a radio button</doc>
-<tag>1005</tag>
-<tag>radio button</tag>
-<status status="PASS" start="2024-12-14T13:09:06.443107" elapsed="23.942499"/>
+<doc>This test case shows how to verify a checkbox</doc>
+<tag>1007</tag>
+<tag>checkbox</tag>
+<status status="PASS" start="2024-12-14T20:25:12.377895" elapsed="41.143701"/>
 </test>
-<status status="PASS" start="2024-12-14T13:09:06.150202" elapsed="24.237679"/>
+<status status="PASS" start="2024-12-14T20:25:11.589382" elapsed="41.934609"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">1005</stat>
-<stat pass="1" fail="0" skip="0">radio button</stat>
+<stat pass="1" fail="0" skip="0">1007</stat>
+<stat pass="1" fail="0" skip="0">checkbox</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="06 RadioButton">06 RadioButton</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="07 CheckBox">07 CheckBox</stat>
 </suite>
 </statistics>
 <errors>

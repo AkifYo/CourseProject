@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-
+# robot -d Results Tests/06_RadioButton.robot
 # Windowss automations
 *** Variables ***
 ${BROWSER}      Chrome
@@ -36,7 +36,12 @@ Verify the radio button is clicked
 
     sleep    2s
 
-    select radio button    sport    football
+    #select radio button    sport    football
+
+    radio button should be set to    sport  basketball
+
+    ${tennis_secildimi}=     radio button should not be selected     sport
+    log         ${tennis_secildimi}
 
     sleep    2s
 
