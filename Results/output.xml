@@ -1,96 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-14T20:25:11.587584" rpa="false" schemaversion="5">
-<suite id="s1" name="07 CheckBox" source="C:\development\CourseProject\Tests\07_CheckBox.robot">
-<test id="s1-t1" name="Verify the checkbox is clicked" line="16">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-25T18:40:12.833945" rpa="false" schemaversion="5">
+<suite id="s1" name="08 Frames" source="C:\development\CourseProject\Tests\08_Frames.robot">
+<test id="s1-t1" name="Verify the frame is selected" line="16">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-14T20:25:12.379630" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<msg time="2024-12-25T18:40:13.924590" level="INFO">Opening browser 'Chrome' to base url 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-14T20:25:12.379283" elapsed="7.657340"/>
+<status status="PASS" start="2024-12-25T18:40:13.924019" elapsed="6.715930"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-14T20:25:20.055250" elapsed="0.964383"/>
+<status status="PASS" start="2024-12-25T18:40:20.734183" elapsed="0.474475"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T20:25:22.065015" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-25T18:40:23.214599" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-25T18:40:21.213455" elapsed="2.001916"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-25T18:40:23.220584" level="INFO">Clicking element 'accept-choices'.</msg>
+<arg>accept-choices</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-25T18:40:23.219530" elapsed="0.595589"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-25T18:40:23.872434" level="INFO">Selecting frame 'id=iframeResult'.</msg>
+<arg>id=iframeResult</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-25T18:40:23.872014" elapsed="17.004838"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-25T18:40:41.878396" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T20:25:21.062704" elapsed="1.003077"/>
+<status status="PASS" start="2024-12-25T18:40:40.877393" elapsed="1.002495"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-14T20:25:22.131802" level="INFO">Clicking button 'gdpr-banner-accept'.</msg>
-<arg>gdpr-banner-accept</arg>
+<msg time="2024-12-25T18:40:41.887167" level="INFO">Clicking button 'Try it'.</msg>
+<arg>Try it</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-14T20:25:22.130192" elapsed="2.022343"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-14T20:25:24.154223" level="INFO">Typing text 'lego' into text field 'gh-ac'.</msg>
-<arg>gh-ac</arg>
-<arg>lego</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-14T20:25:24.153769" elapsed="1.256810"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-14T20:25:25.426971" level="INFO">Clicking element 'gh-btn'.</msg>
-<arg>gh-btn</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-14T20:25:25.425749" elapsed="1.054554"/>
+<status status="PASS" start="2024-12-25T18:40:41.886792" elapsed="0.313455"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T20:25:27.510289" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2024-12-25T18:40:44.201373" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T20:25:26.509501" elapsed="1.001014"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-12-14T20:25:27.531238" level="INFO">Executing JavaScript:
-window.scrollBy(0, 200)
-Without any arguments.</msg>
-<arg>window.scrollBy(0, 200)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-12-14T20:25:27.530159" elapsed="3.651495"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-14T20:25:31.211392" level="INFO">Clicking element 'xpath=//span[contains(text(), 'CITY')][1]'.</msg>
-<arg>xpath=//span[contains(text(), 'CITY')][1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-14T20:25:31.211014" elapsed="6.994021"/>
-</kw>
-<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
-<msg time="2024-12-14T20:25:38.399162" level="INFO">Verifying checkbox '//div/span/input[1]' is selected.</msg>
-<arg>//div/span/input[1]</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<status status="PASS" start="2024-12-14T20:25:38.397907" elapsed="6.382077"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-14T20:25:45.781348" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-14T20:25:44.780608" elapsed="1.000869"/>
+<status status="PASS" start="2024-12-25T18:40:42.200766" elapsed="2.000841"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-12-14T20:25:45.781846" elapsed="7.732945"/>
+<status status="PASS" start="2024-12-25T18:40:44.203093" elapsed="11.190108"/>
 </kw>
-<doc>This test case shows how to verify a checkbox</doc>
-<tag>1007</tag>
-<tag>checkbox</tag>
-<status status="PASS" start="2024-12-14T20:25:12.377895" elapsed="41.143701"/>
+<doc>This test case shows how to verify a frame</doc>
+<tag>1008</tag>
+<tag>frame</tag>
+<status status="PASS" start="2024-12-25T18:40:13.921895" elapsed="41.474884"/>
 </test>
-<status status="PASS" start="2024-12-14T20:25:11.589382" elapsed="41.934609"/>
+<status status="PASS" start="2024-12-25T18:40:12.835711" elapsed="42.565201"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">1007</stat>
-<stat pass="1" fail="0" skip="0">checkbox</stat>
+<stat pass="1" fail="0" skip="0">1008</stat>
+<stat pass="1" fail="0" skip="0">frame</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="07 CheckBox">07 CheckBox</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="08 Frames">08 Frames</stat>
 </suite>
 </statistics>
 <errors>

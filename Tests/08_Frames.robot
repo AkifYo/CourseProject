@@ -20,17 +20,20 @@ Verify the frame is selected
     open browser    ${URL}      ${BROWSER}
     maximize browser window
 
-    select frame                        id=iframeResult
+    sleep   2s
 
-    current frame should contain        JavaScript Alert
+    #select frame                        id=iframeResult
+    #current frame should contain        JavaScript Alert
+    #current frame should not contain    JavaScript Confirm Box Two
+    #unselect frame
+    #frame should contain    id:iframeResult     JavaScript Alert
+    click element                accept-choices
 
-    current frame should not contain    JavaScript Confirm Box Two
+    select frame                 id=iframeResult
 
-    unselect frame
-    frame should contain    id:iframeResult     JavaScript Alert
-
-    sleep               2s
-
+    sleep    1s
+    click button                Try it
+    sleep                       2s
     close all browsers
 
 

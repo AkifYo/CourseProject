@@ -30,9 +30,7 @@ Verify the checkbox is clicked
     sleep    1s
 
     Execute JavaScript    window.scrollBy(0, 200)
-
     click element    xpath=//span[contains(text(), 'CITY')][1]
-
     checkbox should be selected    //div/span/input[1]
 
     sleep    1s

@@ -35,22 +35,16 @@ Verify the frame is selected
 
 
     @{all cars}=    get list items    cars
-
     log many    @{all cars}
 
     select from list by value    cars       volvo
-
     ${list label}   get selected list label    cars
     log     ${list label}
 
     ${list value}   get selected list value    cars
-
-     log     ${list value}
-
+    log     ${list value}
     click button                Submit
-
     sleep               2s
-
     close all browsers
 
 
