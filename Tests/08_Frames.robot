@@ -22,11 +22,11 @@ Verify the frame is selected
 
     sleep   2s
 
-    #select frame                        id=iframeResult
-    #current frame should contain        JavaScript Alert
-    #current frame should not contain    JavaScript Confirm Box Two
-    #unselect frame
-    #frame should contain    id:iframeResult     JavaScript Alert
+    select frame                        id=iframeResult
+    current frame should contain        JavaScript Alert
+    current frame should not contain    JavaScript Confirm Box Two
+    unselect frame
+    frame should contain    id:iframeResult     JavaScript Alert
     click element                accept-choices
 
     select frame                 id=iframeResult
